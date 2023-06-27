@@ -17,9 +17,9 @@ fn main() {
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
     match guess.cmp(&secret) {
-        Ordering::Equal => println!("You guessed it right!! its was {secret}"),
         Ordering::Greater => println!("Ah a little lower and you would've guesses it right! its was {secret}"),
         Ordering::Less => println!("A little higher! nvm, try again later its was {secret}"),
+        Ordering::Equal => println!("You guessed it right!! its was {secret}")
     }
     
 
